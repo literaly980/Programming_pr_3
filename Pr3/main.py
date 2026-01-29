@@ -66,9 +66,9 @@ def run_simulation(steps: int, trials: int, seed: int, visualize: bool) -> float
 
     if visualize:
         empty, counts = simulate_once(steps, neighbors, rng)
-        print("\nVisualization (single trial):")
+        print("\nВизуализация (один прогон):")
         print(render_grid(counts, GRID_SIZE))
-        print(f"Empty squares in this trial: {empty}\n")
+        print(f"Пустых клеток в этом прогоне: {empty}\n")
 
     total_empty = 0
     for _ in range(trials):
@@ -95,7 +95,7 @@ def main() -> None:
 
     expected = run_simulation(args.steps, args.trials, args.seed, args.visualize)
     print(
-        f"Expected empty squares after {args.steps} rings: {expected:.6f}"
+        f"Ожидаемое количество пустых клеток после {args.steps} звонков: {expected:.6f}"
     )
 
 
